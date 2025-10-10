@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Mapbox.css'
 import { useState } from 'react';
 
-export function Mapbox({ loadAiportData }) {
+export function Mapbox({ loadAirportData }) {
 
     const [selected, setSelected] = useState(null);
     const MAPBOX_TOKEN = "pk.eyJ1Ijoic2dpbGwyMDI1IiwiYSI6ImNtZ2lnYmFwMTA1azQya3EybW9nd3JxN3YifQ.hShlZw1AIuX3cbd7zJJ4pA";
@@ -122,7 +122,7 @@ export function Mapbox({ loadAiportData }) {
                             latitude={airport.coordinates[1]}
                             onClick={(e) => {
                                 e.originalEvent.stopPropagation();
-                                loadAiportData(airport.icao);
+                                loadAirportData(airport.icao);
                             }}
                         >
                             <div
