@@ -11,7 +11,7 @@ export function PageLayout() {
 
     const loadAirportData = async (airportSelection) => {
 
-        const url = `http://navcanada-job-dashboard-env.eba-mnbdag2c.us-east-1.elasticbeanstalk.com/data/weather?airport=${airportSelection}`
+        const url = `https://navcanada-dashboard-7e69fa348b8f.herokuapp.com/data/weather?airport=${airportSelection}`
         const dataFromServer = await axios.get(url);
         setResponse(dataFromServer.data);
     }
@@ -59,7 +59,6 @@ export function PageLayout() {
                             <h5>How to use the Dashboard</h5>
                             <div>
                                 <ul>
-                                    <li><p className="text-danger"><b>NOTE: </b>Unfortunately, the domain name that AWS ElasticBeanstalk provides is HTTP and not HTTPS, this is causing the page to not load the data from the backend (you can view the error in the web console, it occurs when the code makes the call to the server when any airport location is clicked in the map on the map tab). I will be working on a fix for that but for now, I have recorded a video and made available in the Demo Video tab.</p></li>
                                     <li>Click on the Map tab</li>
                                     <li>Click on any Canadian airport as shown on the map</li>
                                     <li>The NOTAM data is pulled from the server and shown in the section on the right</li>
@@ -88,10 +87,10 @@ export function PageLayout() {
                                     <div className="card-text">
                                         <ul>
                                             <li>The backend is built using Java Spring Boot</li>
-                                            <li>It is hosted on AWS ElasticBeanStalk <a href="http://navcanada-job-dashboard-env.eba-mnbdag2c.us-east-1.elasticbeanstalk.com/" target="_blank">AWS Server Domain</a>
+                                            <li>It is hosted on Heroku <a href="https://navcanada-dashboard-7e69fa348b8f.herokuapp.com/" target="_blank">Heroku Domain</a>
                                                 <ul>
-                                                    <li>The domain currently does not respond to HTTP requests and I have not added an error page yet(will add soon)</li>
-                                                    <li>There is an <a href="http://navcanada-job-dashboard-env.eba-mnbdag2c.us-east-1.elasticbeanstalk.com/data/weather?airport=CYOW" target="_blank">end-point</a> that can be used to see the JSON file that is on the server</li>
+                                                    <li>An error page to handle port 80 calls will be added soon</li>
+                                                    <li>There is an <a href="https://navcanada-dashboard-7e69fa348b8f.herokuapp.com/data/weather?airport=CYOW" target="_blank">end-point</a> that can be used to see the JSON file that is on the server</li>
                                                 </ul>
                                             </li>
                                         </ul>
