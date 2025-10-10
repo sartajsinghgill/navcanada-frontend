@@ -59,7 +59,7 @@ export function PageLayout() {
                             <h5>How to use the Dashboard</h5>
                             <div>
                                 <ul>
-                                    <li><p className="text-danger"><b>NOTE: </b>Unfortunately, the domain name that AWS ElasticBeanstalk provides is HTTP and not HTTPS, this is causing the page to not load the data form the backend. I will be working on a fix for that but for now, I have recorded a video and made available in the Demo Video tab.</p></li>
+                                    <li><p className="text-danger"><b>NOTE: </b>Unfortunately, the domain name that AWS ElasticBeanstalk provides is HTTP and not HTTPS, this is causing the page to not load the data from the backend (you can view the error in the web console, it occurs when the code makes the call to the server when any airport location is clicked in the map on the map tab). I will be working on a fix for that but for now, I have recorded a video and made available in the Demo Video tab.</p></li>
                                     <li>Click on the Map tab</li>
                                     <li>Click on any Canadian airport as shown on the map</li>
                                     <li>The NOTAM data is pulled from the server and shown in the section on the right</li>
