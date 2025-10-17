@@ -126,16 +126,9 @@ export function Mapbox({ loadAirportData }) {
                             }}
                         >
                             <div
-                                style={{
-                                    backgroundColor: selected?.iata === airport.iata ? "#FF3B30" : "#007AFF",
-                                    width: "14px",
-                                    height: "14px",
-                                    borderRadius: "50%",
-                                    border: "2px solid black",
-                                    cursor: "pointer",
-                                }}
-                                title={`${airport.name} (${airport.iata})`}
-                            />
+                                className='marker'
+
+                            ><span title={`${airport.name} (${airport.iata})`}></span></div>
                         </Marker>
                     );
 
